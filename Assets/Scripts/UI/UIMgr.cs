@@ -49,19 +49,25 @@ public class UIMgr : MonoBehaviour
 
     private Canvas canvas;//获取UI组件父对象，这样在实例化面板对象时就可以将它设置为这个父对象的子对象，就可以在场景中看到这个面板了
 
-    //public T GetPanel<T>() where T : BasePanel
-    //{
-    //    string panelName = typeof(T).Name;//获取面板的名字
-    //    if (panelDic.ContainsKey(panelName))//如果字典中已经有这个面板了，就直接返回它
-    //    {
-    //        return panelDic[panelName] as T;
-    //    }
-    //    else//如果字典中没有这个面板，就返回null
-    //    {
-    //        return null;
-    //    }
-    //}
+    //获取面板的方法，供外部调用
+    public T GetPanel<T>() where T : BasePanel
+    {
+        string panelName = typeof(T).Name;//获取面板的名字
+        if (panelDic.ContainsKey(panelName))//如果字典中已经有这个面板了，就直接返回它
+        {
+            return panelDic[panelName] as T;
+        }
+        else//如果字典中没有这个面板，就返回null
+        {
+            return null;
+        }
+    }
 
+    private void Start()
+    {
+        //在游戏开始时 显示登录面板
+        ShowPanel<LogInPanel>();
+    }
 
     /// <summary>
     /// 显示面板

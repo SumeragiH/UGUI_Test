@@ -31,7 +31,8 @@ public abstract class BasePanel : MonoBehaviour
     /// <param name="show">淡入完成后执行的委托</param>
     public virtual void Show(UnityAction show=null)
     {
-        if (isShowing) return;//如果已经在显示了，就不需要再次调用Show方法
+        if (isShowing) 
+            return;//如果已经在显示了，就不需要再次调用Show方法
         isShowing = true;
         canvasGroup.alpha = 0f;//从完全透明开始淡入
         showCallBack+=show;//将传入的显示回调事件添加到showCallBack事件中，这样在淡入完成后就会调用这个回调事件,比如说在淡入完成后播放一个动画或者声音

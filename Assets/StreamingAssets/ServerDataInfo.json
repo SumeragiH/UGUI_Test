@@ -1,0 +1,18 @@
+{
+    "ServerDataDic":{
+        "1":{"ServerID":1,"ServerName":"天下无双1区","ServerState":0,"IsNew":false},
+        "2":{"ServerID":2,"ServerName":"天下无双2区","ServerState":1,"IsNew":false},
+        "3":{"ServerID":3,"ServerName":"天下无双3区","ServerState":2,"IsNew":false},
+        "4":{"ServerID":4,"ServerName":"天下无双4区","ServerState":3,"IsNew":false},
+        "5":{"ServerID":5,"ServerName":"天下无双5区","ServerState":0,"IsNew":false},
+        "6":{"ServerID":6,"ServerName":"天下无双6区","ServerState":1,"IsNew":false},
+        "7":{"ServerID":7,"ServerName":"天下无双7区","ServerState":2,"IsNew":false},
+        "8":{"ServerID":8,"ServerName":"天下无双8区","ServerState":3,"IsNew":false},
+        "9":{"ServerID":9,"ServerName":"天下无双9区","ServerState":0,"IsNew":false},
+        "10":{"ServerID":10,"ServerName":"天下无双10区","ServerState":1,"IsNew":false},
+        "11":{"ServerID":11,"ServerName":"天下无双11区","ServerState":2,"IsNew":false},
+        "12":{"ServerID":12,"ServerName":"天下无双12区","ServerState":3,"IsNew":true},
+        "13":{"ServerID":13,"ServerName":"天下无双13区","ServerState":4,"IsNew":true},
+        "14":{"ServerID":14,"ServerName":"天下无双14区","ServerState":4,"IsNew":true}
+    }
+}
