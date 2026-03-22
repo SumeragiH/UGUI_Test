@@ -128,7 +128,7 @@ public class SelectServerPanel : BasePanel
         ServerPanel s =  UIMgr.Instance.ShowPanel<ServerPanel>();
 
         //更新服务器面板
-        string num = TxtLastServerID.text.Substring(TxtLastServerID.text.Length-1);//获取服务器ID,去掉最后一个字“区”
+        string num = TxtLastServerID.text.Substring(0,TxtLastServerID.text.Length-1);//获取服务器ID,去掉最后一个字“区”
         s.UpdateServerInfo(int.Parse(num));
 
         //隐藏选服面板

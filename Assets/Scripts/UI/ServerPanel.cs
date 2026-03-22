@@ -19,6 +19,7 @@ public class ServerPanel : BasePanel
         btnEnter.onClick.AddListener(OnEnterClick);
         btnChangeServer.onClick.AddListener(OnChangeServerClick);
         btnBack.onClick.AddListener(OnBackClick);
+        Init();
     }
     public void Init()
     {
@@ -77,7 +78,6 @@ public class ServerPanel : BasePanel
     public override void Show(UnityAction show = null)
     {
         base.Show(show);
-        Init();
     }
     
 }
