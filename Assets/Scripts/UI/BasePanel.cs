@@ -56,19 +56,21 @@ public abstract class BasePanel : MonoBehaviour
         if (isShowing)//淡入
         {
             canvasGroup.alpha = Mathf.MoveTowards(canvasGroup.alpha, 1f, alphaChangeSpeed * Time.deltaTime);
-            if (canvasGroup.alpha >= 1f)
+            if (canvasGroup.alpha >= 0.99f)
             {
                 canvasGroup.alpha = 1f;//确保alpha值不会超过1
                 showCallBack?.Invoke();//调用显示回调事件
+                showCallBack = null;//调用完显示回调事件之后就将showCallBack事件置空，这样就不会在下次调用Show方法的时候再次调用这个回调事件了
             }
         }
         else
         {
             canvasGroup.alpha = Mathf.MoveTowards(canvasGroup.alpha, 0f, alphaChangeSpeed * Time.deltaTime);
-            if (canvasGroup.alpha <= 0f)
+            if (canvasGroup.alpha <= 0.01f)
             {
                 canvasGroup.alpha = 0f;//确保alpha值不会小于0
                 hideCallBack?.Invoke();//调用隐藏回调事件
+                hideCallBack = null;//调用完隐藏回调事件之后就将hideCallBack事件置空，这样就不会在下次调用Hide方法的时候再次调用这个回调事件了
             }
         }
     }
